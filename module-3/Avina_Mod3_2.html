@@ -1,0 +1,55 @@
+<!--
+    Oscar Avina
+    11/08/2026
+    Module 3.2 Assignment
+    This form collects five answers about a customer's restaurant experience.
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Restaurant Feedback Form</title>
+  </head>
+  <body>
+    <h1>Restaurant Feedback Form</h1>
+    <p>Complete all five fields to tell us about your meal and service.</p>
+
+    <!-- sends the answers to the JSP when the customer submits the form -->
+    <form action="Avina_Mod3_2.jsp" method="post">
+      <!-- uses the field names to identify the answers sent to the JSP -->
+      <p>
+        <label for="customerName">Customer name:</label><br />
+        <input type="text" id="customerName" name="customerName" />
+      </p>
+      <p>
+        <label for="mealOrdered">Meal ordered:</label><br />
+        <input type="text" id="mealOrdered" name="mealOrdered" />
+      </p>
+
+      <!-- sends the value of the selected option from each dropdown -->
+      <p>
+        <label for="foodRating">Food rating:</label><br />
+        <select id="foodRating" name="foodRating">
+          <option value="Good">Good</option>
+          <option value="Average">Average</option>
+          <option value="Poor">Poor</option>
+        </select>
+      </p>
+      <p>
+        <label for="serviceRating">Service rating:</label><br />
+        <select id="serviceRating" name="serviceRating">
+          <option value="Good">Good</option>
+          <option value="Average">Average</option>
+          <option value="Poor">Poor</option>
+        </select>
+      </p>
+
+      <!-- provides room for a longer comment -->
+      <p>
+        <label for="comments">Comments about your visit:</label><br />
+        <textarea id="comments" name="comments" rows="4" cols="40"></textarea>
+      </p>
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </body>
+</html>
